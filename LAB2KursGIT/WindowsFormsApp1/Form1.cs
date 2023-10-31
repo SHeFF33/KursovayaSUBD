@@ -69,10 +69,25 @@ namespace WindowsFormsApp1
             mydb = null;
             return;
         }
+        string imgFormat;
+        string imgName;
 
         private void button3_Click(object sender, EventArgs e)
         {
+            openFileDialog1.InitialDirectory = @"C:\Users\Xzidx\Pictures\GameCenter\Desktop";
+            openFileDialog1.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
 
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Image photo = new Bitmap(openFileDialog1.FileName);
+
+                string imgPath = openFileDialog1.FileName;
+                imgFormat = Path.GetExtension(imgPath).Replace(".", "").ToLower();
+                imgName = Path.GetFileName(imgPath).Replace(Path.GetExtension(imgPath), "");
+
+                byte[] pic = ImageToByte(photo, System.Drawing.Imaging.ImageFormat.Png);
+                SaveImage(pic);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
