@@ -115,3 +115,23 @@ C:\Users\denzi\3 курс\СУБД\LAB2\LAB2-финальный вариант\W
 C:\Users\denzi\3 курс\СУБД\LAB2\LAB2-финальный вариант\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\denzi\3 курс\СУБД\LAB2\LAB2-финальный вариант\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\denzi\3 курс\СУБД\LAB2\LAB2-финальный вариант\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\System.Data.SQLite.dll
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\bin\Debug\System.Data.SQLite.xml
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\denzi\OneDrive\Документы\GitHub\KursovayaSUBD\LAB2KursGIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
