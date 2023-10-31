@@ -69,6 +69,25 @@ namespace WindowsFormsApp1
             mydb = null;
             return;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mydb = new sqliteclass();
+            sSql = "delete from myphoto";
+            if (mydb.iExecuteNonQuery(sPath, sSql, 1) == 0)
+            {
+                Text = "Ошибка удаления записи!";
+                mydb = null;
+                return;
+            }
+            mydb = null;
+            Text = "Записи удалены из БД!";
+        }
     }
 }
 

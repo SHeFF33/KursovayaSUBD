@@ -118,25 +118,27 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(322, 256);
+            this.button2.Location = new System.Drawing.Point(159, 256);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 55);
             this.button2.TabIndex = 16;
             this.button2.Text = "Удалить данные";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(159, 256);
+            this.button3.Location = new System.Drawing.Point(481, 256);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(157, 55);
             this.button3.TabIndex = 17;
             this.button3.Text = "Добавить изображение";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(469, 256);
+            this.button4.Location = new System.Drawing.Point(306, 256);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 55);
             this.button4.TabIndex = 18;
