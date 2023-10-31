@@ -88,6 +88,35 @@ namespace WindowsFormsApp1
             mydb = null;
             Text = "Записи удалены из БД!";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            mydb = new sqliteclass();
+            sSql = "select * from myphoto";
+            DataRow[] datarows = mydb.drExecute(sPath, sSql);
+
+            if (datarows == null)
+            {
+                Text = "Ошибка чтения!";
+                mydb = null;
+                return;
+            }
+            Text = "";
+
+            dataGridView1.Rows.Clear();
+
+            foreach (DataRow dr in datarows)
+            {
+
+                dataGridView1.Rows.Add(dr["id"], dr["name"], dr["format"], dr["date"]);
+            }
+
+            foreach (DataRow dr in datarows)
+            {
+                Text += dr["id"].ToString().Trim() + " " + dr["name"].ToString().Trim() + " " + dr["format"].ToString().Trim() + " " + dr["date"].ToString().Trim() + " ";
+            }
+            mydb = null;
+        }
     }
 }
 
