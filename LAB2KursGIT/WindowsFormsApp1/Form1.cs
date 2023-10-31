@@ -30,6 +30,45 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mydb = new sqliteclass();
+            sSql = @"CREATE TABLE if not exists [myphoto]([id] INTEGER PRIMARY KEY AUTOINCREMENT,[name] TEXT,[format] TEXT,[date] REAl,[photo] BLOP);";
+            mydb.iExecuteNonQuery(sPath, sSql, 0);
+
+            sSql = @"insert into myphoto (name,format,date) values('Фамилия Имя Отчество','Да','now');";
+            if (mydb.iExecuteNonQuery(sPath, sSql, 1) == 0)
+            {
+                Text = "Ошибка проверки таблицы на запись,";
+                Text += " таблица или не создана или не прошла запись тестовой строки!";
+                mydb = null;
+                return;
+            }
+            sSql = "select * from myphoto";
+            DataRow[] datarows = mydb.drExecute(sPath, sSql);
+            if (datarows == null)
+            {
+                Text = "Ошибка проверки таблицы на чтение!";
+                mydb = null;
+                return;
+            }
+            Text = "";
+            foreach (DataRow dr in datarows)
+            {
+                Text += dr["id"].ToString().Trim() + dr["name"].ToString().Trim() + dr["format"].ToString().Trim() + " ";
+            }
+            sSql = "delete from myphoto";
+            if (mydb.iExecuteNonQuery(sPath, sSql, 1) == 0)
+            {
+                Text = "Ошибка проверки таблицы на удаление записи!";
+                mydb = null;
+                return;
+            }
+            Text = "Таблица создана!";
+            mydb = null;
+            return;
+        }
     }
 }
 
