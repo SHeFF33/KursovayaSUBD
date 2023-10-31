@@ -132,6 +132,76 @@ namespace WindowsFormsApp1
             }
             mydb = null;
         }
+        public byte[] ImageToByte(Image image, System.Drawing.Imaging.ImageFormat format)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, format);
+                byte[] imageBytes = ms.ToArray();
+                return imageBytes;
+            }
+        }
+        void SaveImage(byte[] imagen)
+        {
+            DateTime now = DateTime.Now;
+            db_connect.cmd = db_connect.conn.CreateCommand();
+            db_connect.cmd.CommandText = String.Format("INSERT INTO myphoto ([name], [format], [date], [photo]) VALUES ('" + imgName + "','" + imgFormat + "','" + now + "',@0);");
+            SQLiteParameter param = new SQLiteParameter("@0", System.Data.DbType.Binary);
+            param.Value = imagen;
+            db_connect.cmd.Parameters.Add(param);
+            db_connect.conn.Open();
+            try
+            {
+                db_connect.cmd.ExecuteNonQuery();
+                MessageBox.Show("Изображение добавлено (обновите таблицу)");
+            }
+            catch (Exception exc1)
+            {
+                MessageBox.Show(exc1.Message);
+            }
+            db_connect.conn.Close();
+        }
+        public Image ByteToImage(byte[] imageBytes)
+        {
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = new Bitmap(ms);
+            return image;
+        }
+
+        void LoadImage()
+        {
+            string query = "SELECT photo FROM myphoto WHERE ID=@id;";
+            db_connect.cmd = new SQLiteCommand(query, db_connect.conn);
+            try
+            {
+                db_connect.cmd.Parameters.AddWithValue("@id", textBox1.Text);
+            }
+            catch (Exception exc1)
+            {
+                MessageBox.Show("Ошибка! Введите числовое значение, совпадающее с ID изображения.");
+            }
+            db_connect.conn.Open();
+            try
+            {
+                IDataReader rdr = db_connect.cmd.ExecuteReader();
+                try
+                {
+                    while (rdr.Read())
+                    {
+                        byte[] a = (System.Byte[])rdr[0];
+                        pictureBox1.Image = ByteToImage(a);
+                    }
+                }
+                catch (Exception exc) { MessageBox.Show(exc.Message); }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            db_connect.conn.Close();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
